@@ -6,7 +6,8 @@ import { ConfigService } from '@nestjs/config';
 
 @Controller('user')
 export class UserController {
-  constructor(private readonly userService: UserService, private readonly configService: ConfigService) {}
+  constructor(private readonly userService: UserService,
+    private readonly configService: ConfigService) { }
 
   @Post()
   create(@Body() createUserDto: CreateUserDto) {
@@ -19,9 +20,11 @@ export class UserController {
     return this.userService.findAll();
   }
 
-  @Get('getTestName')
+  @Get('test')
   getTestName() {
-    return this.configService.get('TEST_VALUE').name;
+    const result = this.configService.get('TEST_VALUE');
+    console.log(result)
+    return result
   }
 
   @Get(':id')
