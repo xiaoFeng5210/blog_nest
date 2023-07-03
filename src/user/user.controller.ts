@@ -22,7 +22,7 @@ export class UserController {
 
   @Get('test')
   getTestName() {
-    const result = this.configService.get('TEST_VALUE');
+    const result = this.configService.get('TEST_VALUE').name;
     console.log(result)
     return result
   }
