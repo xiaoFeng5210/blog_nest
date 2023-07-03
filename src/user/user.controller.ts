@@ -20,13 +20,6 @@ export class UserController {
     return this.userService.findAll();
   }
 
-  @Get('test')
-  getTestName() {
-    const result = this.configService.get('TEST_VALUE').name;
-    console.log(result)
-    return result
-  }
-
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.userService.findOne(+id);

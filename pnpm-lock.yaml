@@ -12,6 +12,7 @@ specifiers:
   '@nestjs/schematics': ^9.0.0
   '@nestjs/swagger': ^7.0.12
   '@nestjs/testing': ^9.0.0
+  '@nestjs/typeorm': ^10.0.0
   '@types/express': ^4.17.13
   '@types/jest': 28.1.8
   '@types/node': ^16.0.0
@@ -52,6 +53,7 @@ dependencies:
   '@nestjs/platform-express': 9.2.1_3a4507b80408e3f30ddd3985ad1e6709
   '@nestjs/platform-fastify': 9.2.1_ea2c6c900a5f3fe77bf3d35e618e6a96
   '@nestjs/swagger': 7.0.12_1ce174b831b05a95e8c23706272ad68b
+  '@nestjs/typeorm': 10.0.0_484193baa234285274ec2f7e92ee3986
   cross-env: 7.0.3
   fastify: 4.19.1
   mongoose: 7.3.1
@@ -1172,6 +1174,23 @@ packages:
       '@nestjs/platform-express': 9.2.1_3a4507b80408e3f30ddd3985ad1e6709
       tslib: 2.4.1
     dev: true
+
+  /@nestjs/typeorm/10.0.0_484193baa234285274ec2f7e92ee3986:
+    resolution: {integrity: sha512-WQU4HCDTz4UavsFzvGUKDHqi0MO5K47yFoPXdmh+Z/hCNO7SHCMmV9jLiLukM8n5nKUqJ3jDqiljkWBcZPdCtA==}
+    peerDependencies:
+      '@nestjs/common': ^8.0.0 || ^9.0.0 || ^10.0.0
+      '@nestjs/core': ^8.0.0 || ^9.0.0 || ^10.0.0
+      reflect-metadata: ^0.1.13
+      rxjs: ^7.2.0
+      typeorm: ^0.3.0
+    dependencies:
+      '@nestjs/common': 9.2.1_6363e4e8645f76ca34905e3a7e635f02
+      '@nestjs/core': 9.2.1_27960f42b212c00268241592d616b2a4
+      reflect-metadata: 0.1.13
+      rxjs: 7.8.0
+      typeorm: 0.3.17_mysql2@3.4.3+ts-node@10.9.1
+      uuid: 9.0.0
+    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
