@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { ConfigModule } from '@nestjs/config';
 
+ConfigModule.forRoot({ ignoreEnvFile: true, });
+
 @Module({
   imports: [ConfigModule.forRoot(), UserModule],
   controllers: [AppController],
